@@ -85,7 +85,7 @@ public class Airport {
         Collections.sort(planes, new Comparator<Plane>() {
             //Plane o1, Plane o2 - непонятные названия для Plane
             public int compare(Plane planeFirstForCompare, Plane planeSecondForCompare) {
-                return planeFirstForCompare.Get_Max_Flight_Distance() - planeSecondForCompare.Get_Max_Flight_Distance();
+                return planeFirstForCompare.getMaxFlightDistance() - planeSecondForCompare.getMaxFlightDistance();
             }
         });
         return this;
@@ -95,8 +95,8 @@ public class Airport {
     //убрали ненужный многострочный комментарий описывающий метод ниже
     public Airport sortByMaxSpeed() {
         Collections.sort(planes, new Comparator<Plane>() {
-            public int compare(Plane o1, Plane o2) {
-                return o1.getMS() - o2.getMS();
+            public int compare(Plane FirstPlane, Plane SecondPlane) {
+                return FirstPlane.getMaxSpeed() - SecondPlane.getMaxSpeed();
             }
         });
         return this;

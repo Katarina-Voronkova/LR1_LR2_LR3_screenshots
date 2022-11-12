@@ -19,11 +19,13 @@ abstract public class Plane {
         return model;
     }
 
-    public int getMS() {
+    //public int getMS() - сокращение
+    public int getMaxSpeed() {
         return maxSpeed;
     }
-
-    public int Get_Max_Flight_Distance() {
+    //Get_Max_Flight_Distance()
+    //методы с маленькой буквы, убрать _
+    public int getMaxFlightDistance() {
         return maxFlightDistance;
     }
 
@@ -43,10 +45,11 @@ abstract public class Plane {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Plane)) return false;
-        Plane plane = (Plane) o;
+    //был параметр Object o
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (!(object instanceof Plane)) return false;
+        Plane plane = (Plane) object;
         return maxSpeed == plane.maxSpeed &&
                 maxFlightDistance == plane.maxFlightDistance &&
                 maxLoadCapacity == plane.maxLoadCapacity &&
