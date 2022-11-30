@@ -9,8 +9,7 @@ import page.HomePage;
 
 import java.util.List;
 
-
-public class TestFindFanFiction {
+public class FanficTest {
     WebDriver driver;
 
     @BeforeMethod(alwaysRun = true)
@@ -18,18 +17,21 @@ public class TestFindFanFiction {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
-
     @Test
-    public void FindAllCompletedFanFiction() throws InterruptedException {
+    public void addFanficToReadLater() throws InterruptedException {
+        WebElement labelReadLater = new HomePage(driver).logIn().OpenFanficSearchPage().enterNameOfFanfiction().addToFavorites();
+        Assert.assertTrue(labelReadLater.isDisplayed());
+    }
+    @Test
+    public void FindAllCompletedFanfic() throws InterruptedException {
         List<WebElement> Statuses = new HomePage(driver).openSearchPage().selectFinishedStatus().getСompletedFanfiction();
         for (WebElement status:Statuses) {
             Assert.assertEquals(status.getText(),"Закончен");
         }
     }
-
     @AfterMethod(alwaysRun = true)
     public void browserTearDown(){
-       // driver.quit();
-        //driver = null;
+        driver.quit();
+        driver = null;
     }
 }

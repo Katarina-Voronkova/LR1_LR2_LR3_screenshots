@@ -14,8 +14,8 @@ public class SearchResultsPage {
     public SearchResultsPage(WebDriver driver){
         this.driver = driver;
     }
-    public WebElement addToFavorites() throws InterruptedException {
 
+    public WebElement addToFavorites() throws InterruptedException {
         WebElement favoritesButton = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='FM_Management']")));
         favoritesButton.click();
         WebElement addToReadLaterButton = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='m5']")));

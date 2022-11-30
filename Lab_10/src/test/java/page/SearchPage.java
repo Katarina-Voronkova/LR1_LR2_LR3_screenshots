@@ -24,7 +24,6 @@ public class SearchPage {
 
         WebElement buttonSearch = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@class='modern_button find_form_submit']")));
         buttonSearch.click();
-
         List<WebElement> Statuses = driver.findElements(By.className("FicTable_Status"));
         return Statuses;
     }
