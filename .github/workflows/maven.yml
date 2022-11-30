@@ -17,4 +17,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Test with Maven
-      run: mvn -f Lab_10/test/pom.xml test
+      run: mvn -f Lab_10/pom.xml test
