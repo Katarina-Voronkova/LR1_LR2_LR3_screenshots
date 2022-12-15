@@ -1,0 +1,12 @@
+mvn -Dbrowser=chrome -Dsurefire.suiteXmlFiles=src\test\resources\testng-smoke.xml clean test
+mvn -Dbrowser=chrome -Denvironment=admin clean test
+ Audi.click();
+        A6.click();
+        Price.sendKeys("10000");
+        PriceDo.sendKeys("15000");
+21 октября
+WebDriver driver = new ChromeDriver();
+        driver.get("https://av.by/");
+        WebElement fromButton =new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.id("p-9-price_usd")));
+        fromButton.click();
+        fromButton.sendKeys("100");

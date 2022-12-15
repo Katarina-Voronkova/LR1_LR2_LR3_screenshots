@@ -1,0 +1,12 @@
+page\SearchResultsPage.class
+test\CommonConditions.class
+service\UserCreator.class
+page\UserFavoritesPage.class
+util\TestListener.class
+test\SearchTermNumberinPages.class
+page\HomePage.class
+service\TestDataReader.class
+test\FanficTest.class
+driver\DriverSingleton.class
+page\SearchPage.class
+model\User.class
